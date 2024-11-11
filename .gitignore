@@ -3,3 +3,5 @@
 /PlanetaryExplorationLogs.API/.idea/*
 /PlanetaryExplorationLogs.API/PlanetaryExplorationLogs.API.sln.DotSettings.user
 /PlanetaryExplorationLogs.API/PlanetaryExplorationLogs.API/explorationlogs.db
+/PlanetaryExplorationLogs.API/PlanetaryExplorationLogs.API/explorationlogs.db-shm
+/PlanetaryExplorationLogs.API/PlanetaryExplorationLogs.API/explorationlogs.db-wal
