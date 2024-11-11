@@ -1,5 +1,5 @@
-/PlanetaryExplorationLogs.API/PlanetaryExplorationLogs.API/obj/
-/PlanetaryExplorationLogs.API/PlanetaryExplorationLogs.API/bin/
-/PlanetaryExplorationLogs.API/.idea/
+/PlanetaryExplorationLogs.API/PlanetaryExplorationLogs.API/obj/*
+/PlanetaryExplorationLogs.API/PlanetaryExplorationLogs.API/bin/*
+/PlanetaryExplorationLogs.API/.idea/*
 /PlanetaryExplorationLogs.API/PlanetaryExplorationLogs.API.sln.DotSettings.user
 /PlanetaryExplorationLogs.API/PlanetaryExplorationLogs.API/explorationlogs.db
