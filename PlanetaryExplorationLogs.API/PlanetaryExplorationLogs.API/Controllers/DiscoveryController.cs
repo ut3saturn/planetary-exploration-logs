@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PlanetaryExplorationLogs.API.Data.Context;
 using PlanetaryExplorationLogs.API.Data.Models;
+using PlanetaryExplorationLogs.API.Requests.Commands.Discoveries.DeleteDiscoveryType;
+using PlanetaryExplorationLogs.API.Requests.Commands.Discoveries.UpdateDiscoveryType;
+using PlanetaryExplorationLogs.API.Requests.Queries.Discoveries.GetDiscoveryTypeById;
 using PlanetaryExplorationLogs.API.Requests.Queries.Discoveries.GetDiscoveryTypes;
 using PlanetaryExplorationLogs.API.Utility.Patterns;
 
@@ -26,26 +29,29 @@ namespace PlanetaryExplorationLogs.API.Controllers
 
         // GET: api/discovery/{id}
         [HttpGet("{id}")]
-        public IActionResult GetDiscovery(int id)
+        public async Task<ActionResult<RequestResult<DiscoveryType>>> GetDiscovery(int id)
         {
             // Retrieve a specific discovery by ID.
-            return StatusCode(501); // Not Implemented
+            var query = new GetDiscoveryTypeById_Query(_context, id);
+            return await query.ExecuteAsync();
         }
 
         // PUT: api/discovery/{id}
-        [HttpPut("{id}")]
-        public IActionResult UpdateDiscovery(int id)
+        [HttpPut()]
+        public async Task<ActionResult<RequestResult<int>>> UpdateDiscovery([FromBody] DiscoveryType discoveryType)
         {
             // Update an existing discovery.
-            return StatusCode(501); // Not Implemented
+            var query = new UpdateDiscovery_Query(_context, discoveryType);
+            return await query.ExecuteAsync();
         }
 
         // DELETE: api/discovery/{id}
         [HttpDelete("{id}")]
-        public IActionResult DeleteDiscovery(int id)
+        public async Task<ActionResult<RequestResult<int>>> DeleteDiscovery(int id)
         {
             // Delete a discovery.
-            return StatusCode(501); // Not Implemented
+            var query = new DeleteDiscovery_Query(_context, id);
+            return await query.ExecuteAsync();
         }
     }
 }
